@@ -19,6 +19,7 @@
 		4B2DB5FE1D6599DE0036181B /* NSObject+Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DB5FD1D6599DE0036181B /* NSObject+Calculate.m */; };
 		4B3A67601D85A3CB00397002 /* CeShiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A675F1D85A3CB00397002 /* CeShiView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4B3A67631D85A53300397002 /* CeshiString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A67621D85A53300397002 /* CeshiString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4B8C47461D94EFD800FF3BF1 /* NodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8C47451D94EFD800FF3BF1 /* NodeManager.m */; };
 		4BA485531D77205000352A20 /* SortsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA485521D77205000352A20 /* SortsManager.m */; };
 		4BB649161D7F03420022CCC5 /* UIView+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB649151D7F03420022CCC5 /* UIView+Copy.m */; };
 		4BF2B1FE1D76FB9C00CCDA3C /* Sorts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */; };
@@ -65,6 +66,8 @@
 		4B3A675F1D85A3CB00397002 /* CeShiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeShiView.m; sourceTree = "<group>"; };
 		4B3A67611D85A53300397002 /* CeshiString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeshiString.h; sourceTree = "<group>"; };
 		4B3A67621D85A53300397002 /* CeshiString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeshiString.m; sourceTree = "<group>"; };
+		4B8C47441D94EFD800FF3BF1 /* NodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeManager.h; sourceTree = "<group>"; };
+		4B8C47451D94EFD800FF3BF1 /* NodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeManager.m; sourceTree = "<group>"; };
 		4BA485511D77205000352A20 /* SortsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortsManager.h; sourceTree = "<group>"; };
 		4BA485521D77205000352A20 /* SortsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortsManager.m; sourceTree = "<group>"; };
 		4BB649141D7F03420022CCC5 /* UIView+Copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Copy.h"; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 				4BB649151D7F03420022CCC5 /* UIView+Copy.m */,
 				4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */,
 				4BF2B1FD1D76FB9C00CCDA3C /* Sorts.hpp */,
+				4B8C47431D94EFA500FF3BF1 /* Node链表 */,
 				4B2DB5C71D615F860036181B /* Main.storyboard */,
 				4B2DB5CA1D615F860036181B /* Assets.xcassets */,
 				4B2DB5CC1D615F860036181B /* LaunchScreen.storyboard */,
@@ -172,6 +176,15 @@
 				4B2DB5E51D615F860036181B /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		4B8C47431D94EFA500FF3BF1 /* Node链表 */ = {
+			isa = PBXGroup;
+			children = (
+				4B8C47441D94EFD800FF3BF1 /* NodeManager.h */,
+				4B8C47451D94EFD800FF3BF1 /* NodeManager.m */,
+			);
+			name = "Node链表";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +326,7 @@
 				4B3A67601D85A3CB00397002 /* CeShiView.m in Sources */,
 				4BF2B1FE1D76FB9C00CCDA3C /* Sorts.cpp in Sources */,
 				4BB649161D7F03420022CCC5 /* UIView+Copy.m in Sources */,
+				4B8C47461D94EFD800FF3BF1 /* NodeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

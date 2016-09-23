@@ -13,7 +13,7 @@
 //#include "Sorts.hpp"
 #import "SortsManager.h"
 #import "CeshiString.h"
-
+#import "NodeManager.h"
 
 
 
@@ -194,7 +194,7 @@
 - (void)bbbbb:(UIButton *)btn{
 //    NSArray *array = @[@666,@8,@6,@676,@432,@2,@4,@123,@6549,@465489,@321,@4,@9,@21,@98,@89,@78,@87,@654,@98745,@65975,@12345,@23456,@45678,@568912,@147,@258,@369,@741,@852,@963];
 //    [SortsManager sortWithQuick:[array mutableCopy] low:0 high:array.count-1];
-    NSInteger *age = 11;
+//    NSInteger *age = 11;
 //    BOOL *stop = YES;
     
 //    [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -232,8 +232,13 @@
 //    bbbbbc(2);
     
     
-    
-    
+
+    NodeManager *node = [[NodeManager alloc] initWithNodeLength:6];
+    [node printNodeList:node.head];
+    [node reverseSinglyNodeListWithRecursive:node.head nextNode:node.head->next];
+//    [node reverseSinglyNodeList:node.head];
+    [node printNodeList:node.head];
+//    NSLog(@"是否存在环：%@，  环的长度：%d  ,环的开始位置:%d",@([node isExistLoop:node.head]),node.loopLength,node.loopStart);
 }
 
 - (void)getMaxSum:(NSArray *)a{
