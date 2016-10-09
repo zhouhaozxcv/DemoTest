@@ -9,7 +9,7 @@
 #import "ListViewController.h"
 #import "NodeListViewController.h"
 #import "NSArray+Checking.h"
-#import "TransformManager.h"
+#import "TransformViewController.h"
 
 @interface ListViewController ()
 
@@ -50,8 +50,8 @@
 }
 
 - (void)transformManager{
-//    NSLog(@"self = %@",self.titles);
-    NSLog(@"%@",[TransformManager decimalToHex:1000]);
+    TransformViewController *node = [[TransformViewController alloc] init];
+    [self.navigationController pushViewController:node animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

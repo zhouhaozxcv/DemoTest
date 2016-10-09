@@ -22,6 +22,7 @@
 		4B8C47461D94EFD800FF3BF1 /* NodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8C47451D94EFD800FF3BF1 /* NodeManager.m */; };
 		4BA485531D77205000352A20 /* SortsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA485521D77205000352A20 /* SortsManager.m */; };
 		4BB649161D7F03420022CCC5 /* UIView+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB649151D7F03420022CCC5 /* UIView+Copy.m */; };
+		4BCA73D51DAA760B005AA43F /* TransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA73D41DAA760B005AA43F /* TransformViewController.m */; };
 		4BD29E4A1DA8FED4000BC212 /* TreeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD29E491DA8FED4000BC212 /* TreeManager.m */; };
 		4BD29E4F1DA8FF9F000BC212 /* TransformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD29E4E1DA8FF9F000BC212 /* TransformManager.m */; };
 		4BF2B1FE1D76FB9C00CCDA3C /* Sorts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */; };
@@ -78,6 +79,8 @@
 		4BA485521D77205000352A20 /* SortsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortsManager.m; sourceTree = "<group>"; };
 		4BB649141D7F03420022CCC5 /* UIView+Copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Copy.h"; sourceTree = "<group>"; };
 		4BB649151D7F03420022CCC5 /* UIView+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Copy.m"; sourceTree = "<group>"; };
+		4BCA73D31DAA760B005AA43F /* TransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformViewController.h; sourceTree = "<group>"; };
+		4BCA73D41DAA760B005AA43F /* TransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformViewController.m; sourceTree = "<group>"; };
 		4BD29E481DA8FED4000BC212 /* TreeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeManager.h; sourceTree = "<group>"; };
 		4BD29E491DA8FED4000BC212 /* TreeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeManager.m; sourceTree = "<group>"; };
 		4BD29E4D1DA8FF9F000BC212 /* TransformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformManager.h; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 			children = (
 				4BD29E4D1DA8FF9F000BC212 /* TransformManager.h */,
 				4BD29E4E1DA8FF9F000BC212 /* TransformManager.m */,
+				4BCA73D31DAA760B005AA43F /* TransformViewController.h */,
+				4BCA73D41DAA760B005AA43F /* TransformViewController.m */,
 			);
 			name = "转换问题";
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				4B2DB5C01D615F860036181B /* main.m in Sources */,
 				4B3A67631D85A53300397002 /* CeshiString.m in Sources */,
 				4BA485531D77205000352A20 /* SortsManager.m in Sources */,
+				4BCA73D51DAA760B005AA43F /* TransformViewController.m in Sources */,
 				4BD29E4A1DA8FED4000BC212 /* TreeManager.m in Sources */,
 				4B2DB5FE1D6599DE0036181B /* NSObject+Calculate.m in Sources */,
 				4BF8B3421DAA4EAC0020E323 /* NodeListViewController.m in Sources */,
