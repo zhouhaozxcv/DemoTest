@@ -10,4 +10,6 @@
 
 @interface NSArray (Checking)
 
+//- (id)objAtIndexCheck:(NSInteger)index;
+
 @end

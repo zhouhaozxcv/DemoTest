@@ -23,8 +23,7 @@
     
     self.titles = @[@"链表",
                 @"二进制、十进制、十六进制之间的转换",
-                @"a"
-                ];
+                @"a" ];
     self.selNames = @[@"nodeManager",
                   @"transformManager"
                   ];
@@ -33,6 +32,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *selName = [self.selNames objectAtIndex:indexPath.row];
+    
     if (selName && selName.length > 0) {
         SEL sel = NSSelectorFromString(selName);
 //        IMP imp = [self methodForSelector:sel];

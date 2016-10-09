@@ -33,9 +33,6 @@
 
 @implementation ViewController
 
-+ (void)load{
-    NSLog(@"%s",__FUNCTION__);
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -199,12 +196,19 @@
 //    
 //    [self aa];
 //    [self bb];
+    
+//    SEL sel = @selector(aa);
+    class_addMethod(btn.class, @selector(sayHello), (IMP)sayHello, "v@:");
+    [btn sayHello];
 }
 
 
-- (void)aa{
-    NSLog(@"%s",__FUNCTION__);
-}
+//- (void)aa{
+//    NSLog(@"%s",__FUNCTION__);
+//}
+
+void sayHello(id self, SEL _cmd)
+{ NSLog(@"Hello"); }
 
 - (void)bb{
     NSLog(@"%s",__FUNCTION__);

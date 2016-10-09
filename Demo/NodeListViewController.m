@@ -8,6 +8,7 @@
 
 #import "NodeListViewController.h"
 #import "NodeManager.h"
+#import "NSArray+Checking.h"
 
 @interface NodeListViewController ()
 

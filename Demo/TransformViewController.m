@@ -8,6 +8,7 @@
 
 #import "TransformViewController.h"
 #import "TransformManager.h"
+//#import "NSArray+Checking.h"
 
 @interface TransformViewController (){
     UITextField *lbl;
