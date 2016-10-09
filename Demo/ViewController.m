@@ -14,6 +14,8 @@
 #import "SortsManager.h"
 #import "CeshiString.h"
 #import "NodeManager.h"
+#import "TransformManager.h"
+#import "SourceViewController.h"
 
 
 
@@ -21,6 +23,8 @@
     UIView *view;
     
     NSString *address;
+    
+    UITextField *_textField;
 }
 
 
@@ -78,17 +82,21 @@
 //    int ar[10] = {2,3,5,1,4,6,53,56,123,76};
 //    sort.sortWithStraightInsertionSort(ar, 10);
     
+    _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    _textField.borderStyle = UITextBorderStyleRoundedRect;
+    [self.view addSubview:_textField];
+    
     
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 100, 100);
+    btn.frame = CGRectMake(0, 100, 100, 100);
     btn.backgroundColor = [UIColor redColor];
     btn.tag = 0;
     [btn addTarget:self action:@selector(bbbbb:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
     btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(100, 0, 100, 100);
+    btn.frame = CGRectMake(100, 100, 100, 100);
     btn.backgroundColor = [UIColor yellowColor];
     btn.tag = 1;
     [btn addTarget:self action:@selector(bbbbb:) forControlEvents:UIControlEventTouchUpInside];
@@ -159,36 +167,48 @@
 //    
 //    blk(1);
     
-    CeshiString *string = [[CeshiString alloc] init];
-//    __unsafe_unretained CeshiString *aa = string;
-    NSLog(@"p = %p  p1=%p   D=%zu  %lu",&string,string,class_getInstanceSize(object_getClass(string)),(unsigned long)string.retainCount);
+//    CeshiString *string = [[CeshiString alloc] init];
+////    __unsafe_unretained CeshiString *aa = string;
+//    NSLog(@"p = %p  p1=%p   D=%zu  %lu",&string,string,class_getInstanceSize(object_getClass(string)),(unsigned long)string.retainCount);
+//    
+////    CFArrayRef sf = (__bridge_retained CFArrayRef)string;
+////    CFRelease(sf);
+//    [string release];
+////    string = nil;
+//    
+//    NSLog(@"p = %p  p1=%p   D=%zu",&string,string,class_getInstanceSize(object_getClass(string)));
+//    
+//    NSString *str1 = [[NSString alloc] initWithFormat:@"aa"];
+//    NSLog(@"%ld",(long)[str1 retainCount]);
+//    str1 = @"bb";
+//    NSLog(@"%ld %ld",(long)[str1 retainCount],NSIntegerMax);
+//    NSMutableString *str2 = [[NSMutableString alloc] initWithFormat:@"cc"];
+//    [str2 setString:@"ddd"];
+//    
+//    NSLog(@"end");
+//    
+//    
+//    
+//    self.name = @"aa";
+//    address = @"ww";
     
-//    CFArrayRef sf = (__bridge_retained CFArrayRef)string;
-//    CFRelease(sf);
-    [string release];
-//    string = nil;
+    Method objAtIndex = class_getInstanceMethod(self.class, @selector(aa));
+    Method objAtIndexCheck = class_getInstanceMethod(self.class, @selector(bb));
     
-    NSLog(@"p = %p  p1=%p   D=%zu",&string,string,class_getInstanceSize(object_getClass(string)));
+    method_exchangeImplementations(objAtIndex, objAtIndexCheck);
     
-    NSString *str1 = [[NSString alloc] initWithFormat:@"aa"];
-    NSLog(@"%ld",(long)[str1 retainCount]);
-    str1 = @"bb";
-    NSLog(@"%ld %ld",(long)[str1 retainCount],NSIntegerMax);
-    NSMutableString *str2 = [[NSMutableString alloc] initWithFormat:@"cc"];
-    [str2 setString:@"ddd"];
-    
-    NSLog(@"end");
-    
-    
-    
-    self.name = @"aa";
-    address = @"ww";
-    
-    
-    
-
+    [self aa];
+    [self bb];
 }
 
+
+- (void)aa{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)bb{
+    NSLog(@"%s",__FUNCTION__);
+}
 
 
 - (void)bbbbb:(UIButton *)btn{
@@ -233,12 +253,16 @@
     
     
 
-    NodeManager *node = [[NodeManager alloc] initWithNodeLength:6];
-    [node printNodeList:node.head];
-    [node reverseSinglyNodeListWithRecursive:node.head nextNode:node.head->next];
-//    [node reverseSinglyNodeList:node.head];
-    [node printNodeList:node.head];
-//    NSLog(@"是否存在环：%@，  环的长度：%d  ,环的开始位置:%d",@([node isExistLoop:node.head]),node.loopLength,node.loopStart);
+
+    
+    
+    
+
+    SourceViewController *source = [[SourceViewController alloc] init];
+    [self presentViewController:source animated:YES completion:^{
+        
+    }];
+    
 }
 
 - (void)getMaxSum:(NSArray *)a{

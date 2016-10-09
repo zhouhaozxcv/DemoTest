@@ -22,7 +22,11 @@
 		4B8C47461D94EFD800FF3BF1 /* NodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8C47451D94EFD800FF3BF1 /* NodeManager.m */; };
 		4BA485531D77205000352A20 /* SortsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA485521D77205000352A20 /* SortsManager.m */; };
 		4BB649161D7F03420022CCC5 /* UIView+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB649151D7F03420022CCC5 /* UIView+Copy.m */; };
+		4BD29E4A1DA8FED4000BC212 /* TreeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD29E491DA8FED4000BC212 /* TreeManager.m */; };
+		4BD29E4F1DA8FF9F000BC212 /* TransformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD29E4E1DA8FF9F000BC212 /* TransformManager.m */; };
 		4BF2B1FE1D76FB9C00CCDA3C /* Sorts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */; };
+		4BF8B3381DAA2DDF0020E323 /* SourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B3371DAA2DDF0020E323 /* SourceViewController.m */; };
+		4BF8B33C1DAA41830020E323 /* NSArray+Checking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B33B1DAA41830020E323 /* NSArray+Checking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +76,16 @@
 		4BA485521D77205000352A20 /* SortsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortsManager.m; sourceTree = "<group>"; };
 		4BB649141D7F03420022CCC5 /* UIView+Copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Copy.h"; sourceTree = "<group>"; };
 		4BB649151D7F03420022CCC5 /* UIView+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Copy.m"; sourceTree = "<group>"; };
+		4BD29E481DA8FED4000BC212 /* TreeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeManager.h; sourceTree = "<group>"; };
+		4BD29E491DA8FED4000BC212 /* TreeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeManager.m; sourceTree = "<group>"; };
+		4BD29E4D1DA8FF9F000BC212 /* TransformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformManager.h; sourceTree = "<group>"; };
+		4BD29E4E1DA8FF9F000BC212 /* TransformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformManager.m; sourceTree = "<group>"; };
 		4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sorts.cpp; sourceTree = "<group>"; };
 		4BF2B1FD1D76FB9C00CCDA3C /* Sorts.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sorts.hpp; sourceTree = "<group>"; };
+		4BF8B3361DAA2DDF0020E323 /* SourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceViewController.h; sourceTree = "<group>"; };
+		4BF8B3371DAA2DDF0020E323 /* SourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceViewController.m; sourceTree = "<group>"; };
+		4BF8B33A1DAA41830020E323 /* NSArray+Checking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Checking.h"; sourceTree = "<group>"; };
+		4BF8B33B1DAA41830020E323 /* NSArray+Checking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Checking.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +142,8 @@
 				4B2DB5C21D615F860036181B /* AppDelegate.m */,
 				4B2DB5C41D615F860036181B /* ViewController.h */,
 				4B2DB5C51D615F860036181B /* ViewController.m */,
+				4BF8B3361DAA2DDF0020E323 /* SourceViewController.h */,
+				4BF8B3371DAA2DDF0020E323 /* SourceViewController.m */,
 				4B3A67611D85A53300397002 /* CeshiString.h */,
 				4B3A67621D85A53300397002 /* CeshiString.m */,
 				4B3A675E1D85A3CB00397002 /* CeShiView.h */,
@@ -142,6 +156,9 @@
 				4BB649151D7F03420022CCC5 /* UIView+Copy.m */,
 				4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */,
 				4BF2B1FD1D76FB9C00CCDA3C /* Sorts.hpp */,
+				4BF8B3391DAA415C0020E323 /* 容错检查 */,
+				4BD29E4C1DA8FF1F000BC212 /* 转换问题 */,
+				4BD29E4B1DA8FED9000BC212 /* Tree树 */,
 				4B8C47431D94EFA500FF3BF1 /* Node链表 */,
 				4B2DB5C71D615F860036181B /* Main.storyboard */,
 				4B2DB5CA1D615F860036181B /* Assets.xcassets */,
@@ -185,6 +202,33 @@
 				4B8C47451D94EFD800FF3BF1 /* NodeManager.m */,
 			);
 			name = "Node链表";
+			sourceTree = "<group>";
+		};
+		4BD29E4B1DA8FED9000BC212 /* Tree树 */ = {
+			isa = PBXGroup;
+			children = (
+				4BD29E481DA8FED4000BC212 /* TreeManager.h */,
+				4BD29E491DA8FED4000BC212 /* TreeManager.m */,
+			);
+			name = "Tree树";
+			sourceTree = "<group>";
+		};
+		4BD29E4C1DA8FF1F000BC212 /* 转换问题 */ = {
+			isa = PBXGroup;
+			children = (
+				4BD29E4D1DA8FF9F000BC212 /* TransformManager.h */,
+				4BD29E4E1DA8FF9F000BC212 /* TransformManager.m */,
+			);
+			name = "转换问题";
+			sourceTree = "<group>";
+		};
+		4BF8B3391DAA415C0020E323 /* 容错检查 */ = {
+			isa = PBXGroup;
+			children = (
+				4BF8B33A1DAA41830020E323 /* NSArray+Checking.h */,
+				4BF8B33B1DAA41830020E323 /* NSArray+Checking.m */,
+			);
+			name = "容错检查";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,13 +361,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF8B33C1DAA41830020E323 /* NSArray+Checking.m in Sources */,
 				4B2DB5C61D615F860036181B /* ViewController.m in Sources */,
 				4B2DB5C31D615F860036181B /* AppDelegate.m in Sources */,
+				4BF8B3381DAA2DDF0020E323 /* SourceViewController.m in Sources */,
 				4B2DB5C01D615F860036181B /* main.m in Sources */,
 				4B3A67631D85A53300397002 /* CeshiString.m in Sources */,
 				4BA485531D77205000352A20 /* SortsManager.m in Sources */,
+				4BD29E4A1DA8FED4000BC212 /* TreeManager.m in Sources */,
 				4B2DB5FE1D6599DE0036181B /* NSObject+Calculate.m in Sources */,
 				4B3A67601D85A3CB00397002 /* CeShiView.m in Sources */,
+				4BD29E4F1DA8FF9F000BC212 /* TransformManager.m in Sources */,
 				4BF2B1FE1D76FB9C00CCDA3C /* Sorts.cpp in Sources */,
 				4BB649161D7F03420022CCC5 /* UIView+Copy.m in Sources */,
 				4B8C47461D94EFD800FF3BF1 /* NodeManager.m in Sources */,

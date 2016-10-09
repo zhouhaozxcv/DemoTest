@@ -209,6 +209,10 @@
     }
 }
 
+/*
+ 链表：head->1->2->3->4->5->null
+ ①：
+ */
 
 - (void)reverseSinglyNodeList:(struct Node *)head{
     struct Node *p1, *p2;
@@ -226,15 +230,20 @@
     self.head->next = p1;
 }
 
+/* 例：head->1->2->3->4->5->null
+ 使用栈的思想
+ */
+
 - (void)reverseSinglyNodeListWithRecursive:(struct Node *)head nextNode:(struct Node *)next{
     if(next->next == NULL)
     {
-        head->next=next;
+        head->next=next;//这一步之后链表会形成：1->2->3->4->5<-head
         return;//找到最后一个节点
     }
     [self reverseSinglyNodeListWithRecursive:head nextNode:next->next];
-    next->next->next=next;//反转节点
-    next->next=NULL;//第一个节点反转后其后继应该为NULL
+    next->next->next=next;//反转节点，这时候对于最后两个节点来说是个环，1->2->3->4<->5<-head(4和5形成环)
+    next->next=NULL;//第一个节点反转后其后继应该为NULL，断开4指向5的next，1->2->3->4<-5<-head   然后依次类推
+    
 }
 
 @end
