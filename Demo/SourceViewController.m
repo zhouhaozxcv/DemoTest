@@ -7,14 +7,10 @@
 //
 
 #import "SourceViewController.h"
-#import "NodeManager.h"
-#import "TransformManager.h"
 #import "NSArray+Checking.h"
 
-@interface SourceViewController ()<UITableViewDelegate, UITableViewDataSource>{
-    NSArray *_titles;
-    NSArray *_selNames;
-}
+
+@interface SourceViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -24,49 +20,48 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    _titles = @[@"链表",
-                @"二进制、十进制、十六进制之间的转换",
-                @"a"
-                ];
-    _selNames = @[@"nodeManager",
-              @"transformManager"
-              ];
-    
-    SEL selBack = @selector(back:);
-    
-    
-    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
-    back.backgroundColor = [UIColor redColor];
-    [back setTitle:@"返回" forState:UIControlStateNormal];
-    [back setTitleColor:[UIColor greenColor] forState:UIControlStateHighlighted];
-    [back addTarget:self action:selBack forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:back];
-    
-    
-    [back setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:back attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:back attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:20]];
-    [back addConstraint:[NSLayoutConstraint constraintWithItem:back attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0 constant:100]];
-    [back addConstraint:[NSLayoutConstraint constraintWithItem:back attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:20]];
+    self.navigationItem.title = @"列表";
     
     
     
     
     
+    [self.view addSubview:self.back];
+    [_back setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_back attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_back attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:64]];
+    [_back addConstraint:[NSLayoutConstraint constraintWithItem:_back attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0 constant:100]];
+    [_back addConstraint:[NSLayoutConstraint constraintWithItem:_back attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:20]];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    [self.view addSubview:tableView];
+    [self.view addSubview:self.tableView];
+    [_tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.back attribute:NSLayoutAttributeBottom multiplier:1.0 constant:5]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_tableView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
+}
+
+- (UIButton *)back{
+    if (_back == nil) {
+        SEL selBack = @selector(back:);
+        
+        _back = [UIButton buttonWithType:UIButtonTypeCustom];
+        _back.backgroundColor = [UIColor redColor];
+        [_back setTitle:@"关闭" forState:UIControlStateNormal];
+        [_back setTitleColor:[UIColor greenColor] forState:UIControlStateHighlighted];
+        [_back addTarget:self action:selBack forControlEvents:UIControlEventTouchUpInside];
+    }
     
-    [tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tableView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:back attribute:NSLayoutAttributeBottom multiplier:1.0 constant:5]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tableView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tableView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
-    
+    return _back;
+}
+
+- (UITableView *)tableView{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -87,28 +82,9 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *selName = [_selNames objectAtIndex:indexPath.row];
-    if (selName && selName.length > 0) {
-        SEL sel = NSSelectorFromString(selName);
-        IMP imp = [self methodForSelector:sel];
-        imp();
-    }
-}
 
 
-- (void)nodeManager{
-    NodeManager *node = [[NodeManager alloc] initWithNodeLength:6];
-    [node printNodeList:node.head];
-    [node reverseSinglyNodeListWithRecursive:node.head nextNode:node.head->next];
-//    [node reverseSinglyNodeList:node.head];
-    [node printNodeList:node.head];
-//    NSLog(@"是否存在环：%@，  环的长度：%d  ,环的开始位置:%d",@([node isExistLoop:node.head]),node.loopLength,node.loopStart);
-}
 
-- (void)transformManager{
-    NSLog(@"%@",[TransformManager decimalToHex:1000]);
-}
 
 
 - (void)back:(id)sender{
