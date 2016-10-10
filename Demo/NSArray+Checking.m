@@ -14,14 +14,14 @@
 + (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Class class = object_getClass((id)self);//[self class];
+        Class class = NSClassFromString(@"__NSArrayI");
         Method objAtIndex = class_getInstanceMethod(class, @selector(objectAtIndex:));
         Method objAtIndexCheck = class_getInstanceMethod(class, @selector(objAtIndexCheck:));
         
-        BOOL didAddMethod = class_addMethod(class, @selector(objAtIndexCheck:), method_getImplementation(objAtIndexCheck), method_getTypeEncoding(objAtIndexCheck));
+        BOOL didAddMethod = class_addMethod([self class], @selector(objAtIndexCheck:), method_getImplementation(objAtIndexCheck), method_getTypeEncoding(objAtIndexCheck));
         
         if (didAddMethod) {
-            class_replaceMethod(class, @selector(objAtIndexCheck:), method_getImplementation(objAtIndex), method_getTypeEncoding(objAtIndex));
+            class_replaceMethod([self class], @selector(objAtIndexCheck:), method_getImplementation(objAtIndex), method_getTypeEncoding(objAtIndex));
         } else {
             method_exchangeImplementations(objAtIndex, objAtIndexCheck);
         }

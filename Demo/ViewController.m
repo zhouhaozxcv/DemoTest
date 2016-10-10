@@ -60,7 +60,10 @@
 //    NSLog(@"%@",plist);
     
     
-    
+    NSString *str = @"vv";
+    if ([str isEqualToString:@"vv"]) {
+        NSLog(@"bb");
+    }
     
     
     NSInteger result = [NSObject makeCalculate:^(CalculateMaker *make) {
@@ -193,13 +196,13 @@
 //    Method objAtIndexCheck = class_getInstanceMethod(self.class, @selector(bb));
 //    
 //    method_exchangeImplementations(objAtIndex, objAtIndexCheck);
-//    
+//
 //    [self aa];
 //    [self bb];
     
 //    SEL sel = @selector(aa);
-    class_addMethod(btn.class, @selector(sayHello), (IMP)sayHello, "v@:");
-    [btn sayHello];
+//    class_addMethod(btn.class, @selector(sayHello), (IMP)sayHello, "v@:");
+//    [btn sayHello];
 }
 
 
@@ -207,12 +210,12 @@
 //    NSLog(@"%s",__FUNCTION__);
 //}
 
-void sayHello(id self, SEL _cmd)
-{ NSLog(@"Hello"); }
-
-- (void)bb{
-    NSLog(@"%s",__FUNCTION__);
-}
+//void sayHello(id self, SEL _cmd)
+//{ NSLog(@"Hello"); }
+//
+//- (void)bb{
+//    NSLog(@"%s",__FUNCTION__);
+//}
 
 
 - (void)bbbbb:(UIButton *)btn{

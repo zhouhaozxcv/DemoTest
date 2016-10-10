@@ -21,6 +21,7 @@
 		4B3A67631D85A53300397002 /* CeshiString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A67621D85A53300397002 /* CeshiString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4B8C47461D94EFD800FF3BF1 /* NodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8C47451D94EFD800FF3BF1 /* NodeManager.m */; };
 		4BA485531D77205000352A20 /* SortsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA485521D77205000352A20 /* SortsManager.m */; };
+		4BB5ACAC1DAB9A6700407E4F /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5ACAB1DAB9A6700407E4F /* NSString+Check.m */; };
 		4BB649161D7F03420022CCC5 /* UIView+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB649151D7F03420022CCC5 /* UIView+Copy.m */; };
 		4BCA73D51DAA760B005AA43F /* TransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA73D41DAA760B005AA43F /* TransformViewController.m */; };
 		4BD29E4A1DA8FED4000BC212 /* TreeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD29E491DA8FED4000BC212 /* TreeManager.m */; };
@@ -77,6 +78,8 @@
 		4B8C47451D94EFD800FF3BF1 /* NodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeManager.m; sourceTree = "<group>"; };
 		4BA485511D77205000352A20 /* SortsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortsManager.h; sourceTree = "<group>"; };
 		4BA485521D77205000352A20 /* SortsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortsManager.m; sourceTree = "<group>"; };
+		4BB5ACAA1DAB9A6700407E4F /* NSString+Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Check.h"; sourceTree = "<group>"; };
+		4BB5ACAB1DAB9A6700407E4F /* NSString+Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Check.m"; sourceTree = "<group>"; };
 		4BB649141D7F03420022CCC5 /* UIView+Copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Copy.h"; sourceTree = "<group>"; };
 		4BB649151D7F03420022CCC5 /* UIView+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Copy.m"; sourceTree = "<group>"; };
 		4BCA73D31DAA760B005AA43F /* TransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformViewController.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 			children = (
 				4BF8B33A1DAA41830020E323 /* NSArray+Checking.h */,
 				4BF8B33B1DAA41830020E323 /* NSArray+Checking.m */,
+				4BB5ACAA1DAB9A6700407E4F /* NSString+Check.h */,
+				4BB5ACAB1DAB9A6700407E4F /* NSString+Check.m */,
 			);
 			name = "容错检查";
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				4BF8B3381DAA2DDF0020E323 /* SourceViewController.m in Sources */,
 				4B2DB5C01D615F860036181B /* main.m in Sources */,
 				4B3A67631D85A53300397002 /* CeshiString.m in Sources */,
+				4BB5ACAC1DAB9A6700407E4F /* NSString+Check.m in Sources */,
 				4BA485531D77205000352A20 /* SortsManager.m in Sources */,
 				4BCA73D51DAA760B005AA43F /* TransformViewController.m in Sources */,
 				4BD29E4A1DA8FED4000BC212 /* TreeManager.m in Sources */,
