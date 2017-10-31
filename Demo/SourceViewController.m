@@ -21,11 +21,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"列表";
-    
-    
-    
-    
-    
+
     [self.view addSubview:self.back];
     [_back setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_back attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];

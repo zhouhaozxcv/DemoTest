@@ -31,6 +31,8 @@
 		4BF8B33C1DAA41830020E323 /* NSArray+Checking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B33B1DAA41830020E323 /* NSArray+Checking.m */; };
 		4BF8B3421DAA4EAC0020E323 /* NodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B3411DAA4EAC0020E323 /* NodeListViewController.m */; };
 		4BF8B3451DAA502A0020E323 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B3441DAA502A0020E323 /* ListViewController.m */; };
+		D04F963D1FA86AD400AD3A8B /* ZHOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F96391FA86AD300AD3A8B /* ZHOperation.m */; };
+		D04F963E1FA86AD400AD3A8B /* ZHOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F963C1FA86AD400AD3A8B /* ZHOperationQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,10 @@
 		4BF8B3411DAA4EAC0020E323 /* NodeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeListViewController.m; sourceTree = "<group>"; };
 		4BF8B3431DAA502A0020E323 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		4BF8B3441DAA502A0020E323 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		D04F96391FA86AD300AD3A8B /* ZHOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHOperation.m; sourceTree = "<group>"; };
+		D04F963A1FA86AD300AD3A8B /* ZHOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHOperation.h; sourceTree = "<group>"; };
+		D04F963B1FA86AD400AD3A8B /* ZHOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHOperationQueue.h; sourceTree = "<group>"; };
+		D04F963C1FA86AD400AD3A8B /* ZHOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHOperationQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,7 @@
 				4BB649151D7F03420022CCC5 /* UIView+Copy.m */,
 				4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */,
 				4BF2B1FD1D76FB9C00CCDA3C /* Sorts.hpp */,
+				D04F96381FA86AB100AD3A8B /* 启动Alerts消息队列 */,
 				4BF8B3391DAA415C0020E323 /* 容错检查 */,
 				4BD29E4C1DA8FF1F000BC212 /* 转换问题 */,
 				4BD29E4B1DA8FED9000BC212 /* Tree树 */,
@@ -249,6 +256,17 @@
 				4BB5ACAB1DAB9A6700407E4F /* NSString+Check.m */,
 			);
 			name = "容错检查";
+			sourceTree = "<group>";
+		};
+		D04F96381FA86AB100AD3A8B /* 启动Alerts消息队列 */ = {
+			isa = PBXGroup;
+			children = (
+				D04F963A1FA86AD300AD3A8B /* ZHOperation.h */,
+				D04F96391FA86AD300AD3A8B /* ZHOperation.m */,
+				D04F963B1FA86AD400AD3A8B /* ZHOperationQueue.h */,
+				D04F963C1FA86AD400AD3A8B /* ZHOperationQueue.m */,
+			);
+			name = "启动Alerts消息队列";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,7 +404,9 @@
 				4B2DB5C31D615F860036181B /* AppDelegate.m in Sources */,
 				4BF8B3381DAA2DDF0020E323 /* SourceViewController.m in Sources */,
 				4B2DB5C01D615F860036181B /* main.m in Sources */,
+				D04F963E1FA86AD400AD3A8B /* ZHOperationQueue.m in Sources */,
 				4B3A67631D85A53300397002 /* CeshiString.m in Sources */,
+				D04F963D1FA86AD400AD3A8B /* ZHOperation.m in Sources */,
 				4BB5ACAC1DAB9A6700407E4F /* NSString+Check.m in Sources */,
 				4BA485531D77205000352A20 /* SortsManager.m in Sources */,
 				4BCA73D51DAA760B005AA43F /* TransformViewController.m in Sources */,

@@ -10,6 +10,7 @@
 #import "NodeListViewController.h"
 #import "NSArray+Checking.h"
 #import "TransformViewController.h"
+#import "ZHOperationQueue.h"
 
 @interface ListViewController ()
 
@@ -23,10 +24,10 @@
     
     self.titles = @[@"链表",
                 @"二进制、十进制、十六进制之间的转换",
-                @"a" ];
+                @"app启动之后，各种alert的消息弹出的消息队列" ];
     self.selNames = @[@"nodeManager",
                   @"transformManager"
-                  ];
+                  @"appLaunchFinishToAlerts"];
 }
 
 
@@ -52,6 +53,28 @@
 - (void)transformManager{
     TransformViewController *node = [[TransformViewController alloc] init];
     [self.navigationController pushViewController:node animated:YES];
+}
+
+- (void)appLaunchFinishToAlerts{
+    [[ZHOperationQueue currentQueue] addOperation:[[[ZHOperation alloc] init] execute:^(ZHOperation *operation) {
+        NSLog(@"第一个operation执行");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [operation dispose];
+        });
+    }]];
+    [[ZHOperationQueue currentQueue] addOperation:[[[ZHOperation alloc] init] execute:^(ZHOperation *operation) {
+        NSLog(@"第二个operation执行");
+        [operation dispose];
+    }]];
+    [[ZHOperationQueue currentQueue] addOperation:[[[ZHOperation alloc] init] execute:^(ZHOperation *operation) {
+        NSLog(@"第三个operation执行");
+        [operation dispose];
+    }]];
+    [[ZHOperationQueue currentQueue] addOperation:[[[ZHOperation alloc] init] execute:^(ZHOperation *operation) {
+        NSLog(@"第四个operation执行");
+        [operation dispose];
+    }]];
+    [[ZHOperationQueue currentQueue] getOperationToRun];
 }
 
 - (void)didReceiveMemoryWarning {
