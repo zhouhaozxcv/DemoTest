@@ -31,8 +31,7 @@
 		4BF8B33C1DAA41830020E323 /* NSArray+Checking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B33B1DAA41830020E323 /* NSArray+Checking.m */; };
 		4BF8B3421DAA4EAC0020E323 /* NodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B3411DAA4EAC0020E323 /* NodeListViewController.m */; };
 		4BF8B3451DAA502A0020E323 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B3441DAA502A0020E323 /* ListViewController.m */; };
-		D04F963D1FA86AD400AD3A8B /* ZHOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F96391FA86AD300AD3A8B /* ZHOperation.m */; };
-		D04F963E1FA86AD400AD3A8B /* ZHOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F963C1FA86AD400AD3A8B /* ZHOperationQueue.m */; };
+		D07958501FB2FE72002ED111 /* HZReminderHanlder.m in Sources */ = {isa = PBXBuildFile; fileRef = D079584E1FB2FE72002ED111 /* HZReminderHanlder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,10 +99,8 @@
 		4BF8B3411DAA4EAC0020E323 /* NodeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeListViewController.m; sourceTree = "<group>"; };
 		4BF8B3431DAA502A0020E323 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		4BF8B3441DAA502A0020E323 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		D04F96391FA86AD300AD3A8B /* ZHOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHOperation.m; sourceTree = "<group>"; };
-		D04F963A1FA86AD300AD3A8B /* ZHOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHOperation.h; sourceTree = "<group>"; };
-		D04F963B1FA86AD400AD3A8B /* ZHOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHOperationQueue.h; sourceTree = "<group>"; };
-		D04F963C1FA86AD400AD3A8B /* ZHOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHOperationQueue.m; sourceTree = "<group>"; };
+		D079584E1FB2FE72002ED111 /* HZReminderHanlder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZReminderHanlder.m; sourceTree = "<group>"; };
+		D079584F1FB2FE72002ED111 /* HZReminderHanlder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZReminderHanlder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,10 +258,8 @@
 		D04F96381FA86AB100AD3A8B /* 启动Alerts消息队列 */ = {
 			isa = PBXGroup;
 			children = (
-				D04F963A1FA86AD300AD3A8B /* ZHOperation.h */,
-				D04F96391FA86AD300AD3A8B /* ZHOperation.m */,
-				D04F963B1FA86AD400AD3A8B /* ZHOperationQueue.h */,
-				D04F963C1FA86AD400AD3A8B /* ZHOperationQueue.m */,
+				D079584F1FB2FE72002ED111 /* HZReminderHanlder.h */,
+				D079584E1FB2FE72002ED111 /* HZReminderHanlder.m */,
 			);
 			name = "启动Alerts消息队列";
 			sourceTree = "<group>";
@@ -404,9 +399,7 @@
 				4B2DB5C31D615F860036181B /* AppDelegate.m in Sources */,
 				4BF8B3381DAA2DDF0020E323 /* SourceViewController.m in Sources */,
 				4B2DB5C01D615F860036181B /* main.m in Sources */,
-				D04F963E1FA86AD400AD3A8B /* ZHOperationQueue.m in Sources */,
 				4B3A67631D85A53300397002 /* CeshiString.m in Sources */,
-				D04F963D1FA86AD400AD3A8B /* ZHOperation.m in Sources */,
 				4BB5ACAC1DAB9A6700407E4F /* NSString+Check.m in Sources */,
 				4BA485531D77205000352A20 /* SortsManager.m in Sources */,
 				4BCA73D51DAA760B005AA43F /* TransformViewController.m in Sources */,
@@ -416,6 +409,7 @@
 				4BF8B3451DAA502A0020E323 /* ListViewController.m in Sources */,
 				4B3A67601D85A3CB00397002 /* CeShiView.m in Sources */,
 				4BD29E4F1DA8FF9F000BC212 /* TransformManager.m in Sources */,
+				D07958501FB2FE72002ED111 /* HZReminderHanlder.m in Sources */,
 				4BF2B1FE1D76FB9C00CCDA3C /* Sorts.cpp in Sources */,
 				4BB649161D7F03420022CCC5 /* UIView+Copy.m in Sources */,
 				4B8C47461D94EFD800FF3BF1 /* NodeManager.m in Sources */,
@@ -562,6 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zh.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -573,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zh.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

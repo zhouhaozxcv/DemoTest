@@ -10,7 +10,7 @@
 #import "NodeListViewController.h"
 #import "NSArray+Checking.h"
 #import "TransformViewController.h"
-#import "ZHOperationQueue.h"
+#import "HZReminderHanlder.h"
 
 @interface ListViewController ()
 
@@ -56,25 +56,21 @@
 }
 
 - (void)appLaunchFinishToAlerts{
-    [[ZHOperationQueue currentQueue] addOperation:[[[ZHOperation alloc] init] execute:^(ZHOperation *operation) {
-        NSLog(@"第一个operation执行");
+    [[HZReminderHanlder defaultHandler] addReminder:[[HZReminder alloc] init] subscribe:^(HZReminder *reminder) {
+        NSLog(@"第一个 Reminder 执行");
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [operation dispose];
+            [HZReminderHanlder defaultHandler].remindingFinish = YES;
         });
-    }]];
-    [[ZHOperationQueue currentQueue] addOperation:[[[ZHOperation alloc] init] execute:^(ZHOperation *operation) {
-        NSLog(@"第二个operation执行");
-        [operation dispose];
-    }]];
-    [[ZHOperationQueue currentQueue] addOperation:[[[ZHOperation alloc] init] execute:^(ZHOperation *operation) {
-        NSLog(@"第三个operation执行");
-        [operation dispose];
-    }]];
-    [[ZHOperationQueue currentQueue] addOperation:[[[ZHOperation alloc] init] execute:^(ZHOperation *operation) {
-        NSLog(@"第四个operation执行");
-        [operation dispose];
-    }]];
-    [[ZHOperationQueue currentQueue] getOperationToRun];
+    }];
+    
+    [[HZReminderHanlder defaultHandler] addReminder:[[HZReminder alloc] init] subscribe:^(HZReminder *reminder) {
+        NSLog(@"第二个 Reminder 执行");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [HZReminderHanlder defaultHandler].remindingFinish = YES;
+        });
+    }];
+    
+    [[HZReminderHanlder defaultHandler] start];
 }
 
 - (void)didReceiveMemoryWarning {
