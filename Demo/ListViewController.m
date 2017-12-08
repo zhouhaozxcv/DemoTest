@@ -11,6 +11,7 @@
 #import "NSArray+Checking.h"
 #import "TransformViewController.h"
 #import "HZReminderHanlder.h"
+#import "Semaphore.h"
 
 @interface ListViewController ()
 
@@ -24,10 +25,12 @@
     
     self.titles = @[@"链表",
                 @"二进制、十进制、十六进制之间的转换",
-                @"app启动之后，各种alert的消息弹出的消息队列" ];
+                @"app启动之后，各种alert的消息弹出的消息队列" ,
+                    @"线程，信号量，n个线程顺序结束问题"];
     self.selNames = @[@"nodeManager",
-                  @"transformManager"
-                  @"appLaunchFinishToAlerts"];
+                  @"transformManager",
+                  @"appLaunchFinishToAlerts",
+                      @"dispatchSemaphoreTurn"];
 }
 
 
@@ -53,6 +56,10 @@
 - (void)transformManager{
     TransformViewController *node = [[TransformViewController alloc] init];
     [self.navigationController pushViewController:node animated:YES];
+}
+
+- (void)dispatchSemaphoreTurn{
+    Semaphore *m = [[Semaphore alloc] init];
 }
 
 - (void)appLaunchFinishToAlerts{

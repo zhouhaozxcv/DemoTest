@@ -32,6 +32,8 @@
 		4BF8B3421DAA4EAC0020E323 /* NodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B3411DAA4EAC0020E323 /* NodeListViewController.m */; };
 		4BF8B3451DAA502A0020E323 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8B3441DAA502A0020E323 /* ListViewController.m */; };
 		D07958501FB2FE72002ED111 /* HZReminderHanlder.m in Sources */ = {isa = PBXBuildFile; fileRef = D079584E1FB2FE72002ED111 /* HZReminderHanlder.m */; };
+		D0A6C7861FDA8903001FE98A /* Semaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A6C7841FDA8903001FE98A /* Semaphore.m */; };
+		D0A6C7871FDA8903001FE98A /* WorkSigle.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A6C7851FDA8903001FE98A /* WorkSigle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,10 @@
 		4BF8B3441DAA502A0020E323 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		D079584E1FB2FE72002ED111 /* HZReminderHanlder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZReminderHanlder.m; sourceTree = "<group>"; };
 		D079584F1FB2FE72002ED111 /* HZReminderHanlder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZReminderHanlder.h; sourceTree = "<group>"; };
+		D0A6C7821FDA8903001FE98A /* Semaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Semaphore.h; sourceTree = "<group>"; };
+		D0A6C7831FDA8903001FE98A /* WorkSigle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkSigle.h; sourceTree = "<group>"; };
+		D0A6C7841FDA8903001FE98A /* Semaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Semaphore.m; sourceTree = "<group>"; };
+		D0A6C7851FDA8903001FE98A /* WorkSigle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkSigle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 				4BB649151D7F03420022CCC5 /* UIView+Copy.m */,
 				4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */,
 				4BF2B1FD1D76FB9C00CCDA3C /* Sorts.hpp */,
+				D0A6C7811FDA88EE001FE98A /* 线程问题 */,
 				D04F96381FA86AB100AD3A8B /* 启动Alerts消息队列 */,
 				4BF8B3391DAA415C0020E323 /* 容错检查 */,
 				4BD29E4C1DA8FF1F000BC212 /* 转换问题 */,
@@ -262,6 +269,17 @@
 				D079584E1FB2FE72002ED111 /* HZReminderHanlder.m */,
 			);
 			name = "启动Alerts消息队列";
+			sourceTree = "<group>";
+		};
+		D0A6C7811FDA88EE001FE98A /* 线程问题 */ = {
+			isa = PBXGroup;
+			children = (
+				D0A6C7821FDA8903001FE98A /* Semaphore.h */,
+				D0A6C7841FDA8903001FE98A /* Semaphore.m */,
+				D0A6C7831FDA8903001FE98A /* WorkSigle.h */,
+				D0A6C7851FDA8903001FE98A /* WorkSigle.m */,
+			);
+			name = "线程问题";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +418,7 @@
 				4BF8B3381DAA2DDF0020E323 /* SourceViewController.m in Sources */,
 				4B2DB5C01D615F860036181B /* main.m in Sources */,
 				4B3A67631D85A53300397002 /* CeshiString.m in Sources */,
+				D0A6C7871FDA8903001FE98A /* WorkSigle.m in Sources */,
 				4BB5ACAC1DAB9A6700407E4F /* NSString+Check.m in Sources */,
 				4BA485531D77205000352A20 /* SortsManager.m in Sources */,
 				4BCA73D51DAA760B005AA43F /* TransformViewController.m in Sources */,
@@ -412,6 +431,7 @@
 				D07958501FB2FE72002ED111 /* HZReminderHanlder.m in Sources */,
 				4BF2B1FE1D76FB9C00CCDA3C /* Sorts.cpp in Sources */,
 				4BB649161D7F03420022CCC5 /* UIView+Copy.m in Sources */,
+				D0A6C7861FDA8903001FE98A /* Semaphore.m in Sources */,
 				4B8C47461D94EFD800FF3BF1 /* NodeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
