@@ -12,6 +12,7 @@
 #import "TransformViewController.h"
 #import "HZReminderHanlder.h"
 #import "Semaphore.h"
+#import "TRSearch.h"
 
 @interface ListViewController ()
 
@@ -21,13 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    self.titles = @[@"链表",
+    self.titles = @[@"查找",@"链表",
                 @"二进制、十进制、十六进制之间的转换",
                 @"app启动之后，各种alert的消息弹出的消息队列" ,
                     @"线程，信号量，n个线程顺序结束问题"];
-    self.selNames = @[@"nodeManager",
+    self.selNames = @[@"search",@"nodeManager",
                   @"transformManager",
                   @"appLaunchFinishToAlerts",
                       @"dispatchSemaphoreTurn"];
@@ -35,6 +35,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *selName = [self.selNames objectAtIndex:indexPath.row];
     
     if (selName && selName.length > 0) {
@@ -46,6 +47,16 @@
     }
 }
 
+- (void)search{
+    NSArray *array = @[@[@1,@2,@3,@4],@[@2,@4,@6,@8],@[@3,@6,@9,@12],@[@4,@8,@12,@16]];
+    NSInteger target = 4;
+    
+    for (NSInteger i = 0;i < array.count;i++) {
+        NSArray *temp = array[i];
+        NSInteger res = [TRSearch binarySearch:temp target:target];
+        NSLog(@"第%@个数组，%@，index:%@",@(i),(res>-1)?@"找到":@"未找到",@(res));
+    }
+}
 
 - (void)nodeManager{
     NodeListViewController *node = [[NodeListViewController alloc] init];

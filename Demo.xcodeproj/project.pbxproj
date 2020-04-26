@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A0348F2455297D001EFB83 /* listButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04A0348E2455297D001EFB83 /* listButton.jpg */; };
+		04A0349324552B9B001EFB83 /* TRSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0349124552B9B001EFB83 /* TRSearch.m */; };
 		4B2DB5C01D615F860036181B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DB5BF1D615F860036181B /* main.m */; };
 		4B2DB5C31D615F860036181B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DB5C21D615F860036181B /* AppDelegate.m */; };
 		4B2DB5C61D615F860036181B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DB5C51D615F860036181B /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -54,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A0348E2455297D001EFB83 /* listButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = listButton.jpg; sourceTree = "<group>"; };
+		04A0349124552B9B001EFB83 /* TRSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSearch.m; sourceTree = "<group>"; };
+		04A0349224552B9B001EFB83 /* TRSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSearch.h; sourceTree = "<group>"; };
 		4B2DB5BB1D615F860036181B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2DB5BF1D615F860036181B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B2DB5C11D615F860036181B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +140,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A0349024552B90001EFB83 /* 查找 */ = {
+			isa = PBXGroup;
+			children = (
+				04A0349224552B9B001EFB83 /* TRSearch.h */,
+				04A0349124552B9B001EFB83 /* TRSearch.m */,
+			);
+			path = "查找";
+			sourceTree = "<group>";
+		};
 		4B2DB5B21D615F860036181B = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +173,7 @@
 		4B2DB5BD1D615F860036181B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				04A0348E2455297D001EFB83 /* listButton.jpg */,
 				4B2DB5C11D615F860036181B /* AppDelegate.h */,
 				4B2DB5C21D615F860036181B /* AppDelegate.m */,
 				4B2DB5C41D615F860036181B /* ViewController.h */,
@@ -179,6 +194,7 @@
 				4BB649151D7F03420022CCC5 /* UIView+Copy.m */,
 				4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */,
 				4BF2B1FD1D76FB9C00CCDA3C /* Sorts.hpp */,
+				04A0349024552B90001EFB83 /* 查找 */,
 				D0A6C7811FDA88EE001FE98A /* 线程问题 */,
 				D04F96381FA86AB100AD3A8B /* 启动Alerts消息队列 */,
 				4BF8B3391DAA415C0020E323 /* 容错检查 */,
@@ -365,6 +381,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -386,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2DB5CE1D615F860036181B /* LaunchScreen.storyboard in Resources */,
+				04A0348F2455297D001EFB83 /* listButton.jpg in Resources */,
 				4B2DB5CB1D615F860036181B /* Assets.xcassets in Resources */,
 				4B2DB5C91D615F860036181B /* Main.storyboard in Resources */,
 			);
@@ -425,6 +443,7 @@
 				4BD29E4A1DA8FED4000BC212 /* TreeManager.m in Sources */,
 				4B2DB5FE1D6599DE0036181B /* NSObject+Calculate.m in Sources */,
 				4BF8B3421DAA4EAC0020E323 /* NodeListViewController.m in Sources */,
+				04A0349324552B9B001EFB83 /* TRSearch.m in Sources */,
 				4BF8B3451DAA502A0020E323 /* ListViewController.m in Sources */,
 				4B3A67601D85A3CB00397002 /* CeShiView.m in Sources */,
 				4BD29E4F1DA8FF9F000BC212 /* TransformManager.m in Sources */,
