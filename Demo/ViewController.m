@@ -82,15 +82,17 @@
 //    int ar[10] = {2,3,5,1,4,6,53,56,123,76};
 //    sort.sortWithStraightInsertionSort(ar, 10);
     
-    _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 20, 100, 40)];
     _textField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:_textField];
     
     
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 100, 100, 100);
-    btn.backgroundColor = [UIColor redColor];
+    btn.frame = CGRectMake(self.view.frame.size.width-100, 20, 100, 100);
+    btn.backgroundColor = [UIColor darkGrayColor];
+    [btn setTitle:@"问题列表" forState:UIControlStateNormal];
+//    [btn setBackgroundImage:[UIImage imageNamed:@"listButton.jpg"] forState:UIControlStateNormal];
     btn.tag = 0;
     [btn addTarget:self action:@selector(bbbbb:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
@@ -267,6 +269,7 @@
 
     ListViewController *source = [[ListViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:source];
+    nav.modalPresentationStyle = 0;
     [self presentViewController:nav animated:YES completion:nil];
     
 }

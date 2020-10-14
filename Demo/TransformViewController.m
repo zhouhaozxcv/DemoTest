@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationItem.title = @"进制转换";
     
     lbl = [[UITextField alloc] initWithFrame:CGRectMake(100, 64, 100, 20)];
     lbl.backgroundColor = [UIColor orangeColor];

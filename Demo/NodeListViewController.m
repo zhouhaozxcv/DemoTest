@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.navigationItem.title = @"链表";
     
     self.titles = @[@"单链表的创建",
                     @"循环链表的创建",
