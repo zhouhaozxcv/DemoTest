@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045063E425370C66006E6CB7 /* DCookieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045063E325370C66006E6CB7 /* DCookieViewController.m */; };
 		4B2DB5C01D615F860036181B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DB5BF1D615F860036181B /* main.m */; };
 		4B2DB5C31D615F860036181B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DB5C21D615F860036181B /* AppDelegate.m */; };
 		4B2DB5C61D615F860036181B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DB5C51D615F860036181B /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045063E225370C66006E6CB7 /* DCookieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCookieViewController.h; sourceTree = "<group>"; };
+		045063E325370C66006E6CB7 /* DCookieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCookieViewController.m; sourceTree = "<group>"; };
 		4B2DB5BB1D615F860036181B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2DB5BF1D615F860036181B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B2DB5C11D615F860036181B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045063E825370C6B006E6CB7 /* WebViewCookie */ = {
+			isa = PBXGroup;
+			children = (
+				045063E225370C66006E6CB7 /* DCookieViewController.h */,
+				045063E325370C66006E6CB7 /* DCookieViewController.m */,
+			);
+			name = WebViewCookie;
+			sourceTree = "<group>";
+		};
 		4B2DB5B21D615F860036181B = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 				4BB649151D7F03420022CCC5 /* UIView+Copy.m */,
 				4BF2B1FC1D76FB9C00CCDA3C /* Sorts.cpp */,
 				4BF2B1FD1D76FB9C00CCDA3C /* Sorts.hpp */,
+				045063E825370C6B006E6CB7 /* WebViewCookie */,
 				D0A6C7811FDA88EE001FE98A /* 线程问题 */,
 				D04F96381FA86AB100AD3A8B /* 启动Alerts消息队列 */,
 				4BF8B3391DAA415C0020E323 /* 容错检查 */,
@@ -365,6 +378,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -423,6 +437,7 @@
 				4BA485531D77205000352A20 /* SortsManager.m in Sources */,
 				4BCA73D51DAA760B005AA43F /* TransformViewController.m in Sources */,
 				4BD29E4A1DA8FED4000BC212 /* TreeManager.m in Sources */,
+				045063E425370C66006E6CB7 /* DCookieViewController.m in Sources */,
 				4B2DB5FE1D6599DE0036181B /* NSObject+Calculate.m in Sources */,
 				4BF8B3421DAA4EAC0020E323 /* NodeListViewController.m in Sources */,
 				4BF8B3451DAA502A0020E323 /* ListViewController.m in Sources */,
@@ -576,7 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zh.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,7 +603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zh.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -12,6 +12,7 @@
 #import "TransformViewController.h"
 #import "HZReminderHanlder.h"
 #import "Semaphore.h"
+#import "DCookieViewController.h"
 
 @interface ListViewController ()
 
@@ -26,11 +27,11 @@
     self.titles = @[@"链表",
                 @"二进制、十进制、十六进制之间的转换",
                 @"app启动之后，各种alert的消息弹出的消息队列" ,
-                    @"线程，信号量，n个线程顺序结束问题"];
+                    @"线程，信号量，n个线程顺序结束问题",@"WKWebView 设置Cookie"];
     self.selNames = @[@"nodeManager",
                   @"transformManager",
                   @"appLaunchFinishToAlerts",
-                      @"dispatchSemaphoreTurn"];
+                      @"dispatchSemaphoreTurn",@"setWebViewCookie"];
 }
 
 
@@ -78,6 +79,11 @@
     }];
     
     [[HZReminderHanlder defaultHandler] start];
+}
+
+- (void)setWebViewCookie{
+    DCookieViewController *cookie = [[DCookieViewController alloc] init];
+    [self.navigationController pushViewController:cookie animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
